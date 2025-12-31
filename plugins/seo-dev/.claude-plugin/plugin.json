@@ -1,0 +1,20 @@
+{
+  "name": "seo-dev",
+  "version": "1.0.0",
+  "description": "Comprehensive SEO analysis and optimization plugin for developers. Analyzes codebases for SEO issues, provides actionable improvements with severity levels, and helps implement fixes with user choice.",
+  "author": {
+    "name": "Developer",
+    "email": ""
+  },
+  "keywords": [
+    "seo",
+    "optimization",
+    "meta-tags",
+    "structured-data",
+    "web-development",
+    "next.js",
+    "react",
+    "analysis"
+  ],
+  "license": "MIT"
+}

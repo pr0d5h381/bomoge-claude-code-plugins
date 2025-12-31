@@ -1,0 +1,52 @@
+{
+  "$schema": "./schemas/marketplace.schema.json",
+  "name": "Bomoge Claude Code Plugins",
+  "description": "Community plugins for Claude Code - SEO analysis, development tools, and more",
+  "version": "1.0.0",
+  "author": {
+    "name": "Bomoge",
+    "github": "pr0d5h381"
+  },
+  "repository": "https://github.com/pr0d5h381/bomoge-claude-code-plugins",
+  "plugins": [
+    {
+      "name": "seo-dev",
+      "version": "1.0.0",
+      "description": "Comprehensive SEO analysis and optimization plugin. Analyzes codebases for SEO issues, provides actionable improvements with severity levels, and helps implement fixes.",
+      "path": "plugins/seo-dev",
+      "author": "Bomoge",
+      "category": "analysis",
+      "tags": ["seo", "optimization", "meta-tags", "structured-data", "next.js", "web-development"],
+      "features": [
+        "Full SEO audit across 15+ categories",
+        "Severity levels (Critical, Warning, Opportunity)",
+        "Interactive multiselect for fixes",
+        "Framework auto-detection (Next.js, Nuxt, SvelteKit)",
+        "Proactive SEO reminders on page creation"
+      ],
+      "components": {
+        "skills": 1,
+        "commands": 1,
+        "agents": 1,
+        "hooks": 1
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "analysis",
+      "name": "Analysis & Optimization",
+      "description": "Plugins for code analysis, SEO, performance, and optimization"
+    },
+    {
+      "id": "development",
+      "name": "Development Tools",
+      "description": "Plugins for development workflows, testing, and automation"
+    },
+    {
+      "id": "integrations",
+      "name": "Integrations",
+      "description": "Plugins for external service integrations"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "PostToolUse": [
+    {
+      "matcher": "Write|Edit",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "Check if the file that was just created or modified is a page component (e.g., page.tsx, page.vue, +page.svelte, index.tsx in a route directory, or similar page patterns for web frameworks).\n\nIf it IS a page component, respond with a brief, friendly reminder:\n\"💡 **SEO Tip:** New page detected! Consider running `/seo` to check meta tags, OpenGraph, and structured data for this page.\"\n\nIf it is NOT a page component (e.g., utility file, component, hook, API route, config file), respond with just: \"ok\"\n\nBe conservative - only suggest SEO check for actual page/route files that will be rendered as web pages.",
+          "timeout": 5000
+        }
+      ]
+    }
+  ]
+}
