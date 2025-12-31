@@ -32,6 +32,44 @@ Perform a comprehensive SEO audit of the current project and provide actionable 
 
 ## Execution Steps
 
+### Step 0: Ask About Scope
+
+**IMPORTANT: Always start by asking the user about the scope of analysis.**
+
+Use AskUserQuestion with these options:
+
+**Question 1: "What would you like to analyze?"**
+- **Entire project** - Scan all files in src/, app/, pages/, components/
+- **Specific folder** - Analyze only a specific directory (e.g., src/app/products/)
+- **Single page** - Analyze one specific page file
+- **Custom** - Let user specify exactly what to analyze
+
+**Question 2: "Which SEO categories to check?"**
+- **All categories (Recommended)** - Full comprehensive audit
+- **Only critical** - Meta tags, canonical, sitemap, robots
+- **Specific categories** - Let user choose from the list
+
+If user selects "Specific folder", "Single page", or "Custom" - ask follow-up:
+- "Enter the path to analyze (e.g., src/app/products/ or src/app/page.tsx):"
+
+Store the scope in a variable and use it to limit file searches in subsequent steps.
+
+**Example interaction:**
+```
+🔍 SEO Audit Setup
+
+What would you like to analyze?
+○ Entire project (Recommended)
+○ Specific folder
+○ Single page
+○ Custom path
+
+Which SEO categories?
+○ All categories (Recommended)
+○ Only critical (meta, canonical, sitemap)
+○ Let me choose specific categories
+```
+
 ### Step 1: Detect Framework
 
 Search for framework indicators in package.json:
@@ -49,23 +87,32 @@ Report detected framework to user.
 
 ### Step 2: Scan Codebase
 
-For each requested category, scan relevant files:
+**Use the scope from Step 0 to limit file searches.**
 
-| Category | File Patterns |
-|----------|---------------|
-| meta | `**/page.tsx`, `**/layout.tsx`, `**/*.vue`, `**/+page.svelte` |
-| opengraph | Same as meta + look for og: properties |
-| structured-data | Search for `application/ld+json`, JSON-LD patterns |
-| technical | `robots.txt`, `sitemap.xml`, `sitemap.ts` |
-| images | `**/*.tsx`, `**/*.vue`, search for `<img`, `<Image` |
-| urls | Route structure, dynamic routes |
-| content | Search for `<h1`, `<h2`, heading patterns |
-| links | Search for `<a`, `<Link`, href patterns |
-| performance | Check for lazy loading, preload, optimization patterns |
-| mobile | Check viewport meta, responsive patterns |
-| accessibility | Check for aria-*, semantic HTML |
-| i18n | Check for hreflang, i18n config |
-| indexing | Check robots meta, noindex patterns |
+- If **Entire project**: Search in `src/`, `app/`, `pages/`, `components/`
+- If **Specific folder**: Search only in the user-specified path
+- If **Single page**: Analyze only that specific file
+- If **Custom**: Use the user-provided path pattern
+
+For each requested category, scan relevant files within the scope:
+
+| Category | File Patterns | Search Path |
+|----------|---------------|-------------|
+| meta | `**/page.tsx`, `**/layout.tsx`, `**/*.vue` | `{scope}` |
+| opengraph | Same as meta + look for og: properties | `{scope}` |
+| structured-data | Search for `application/ld+json` | `{scope}` |
+| technical | `robots.txt`, `sitemap.xml`, `sitemap.ts` | Project root |
+| images | `**/*.tsx`, `**/*.vue`, search for `<img` | `{scope}` |
+| urls | Route structure, dynamic routes | `{scope}` |
+| content | Search for `<h1`, `<h2`, heading patterns | `{scope}` |
+| links | Search for `<a`, `<Link`, href patterns | `{scope}` |
+| performance | Check for lazy loading, preload patterns | `{scope}` |
+| mobile | Check viewport meta, responsive patterns | `{scope}` |
+| accessibility | Check for aria-*, semantic HTML | `{scope}` |
+| i18n | Check for hreflang, i18n config | `{scope}` |
+| indexing | Check robots meta, noindex patterns | `{scope}` |
+
+**Note:** Technical SEO (sitemap, robots.txt) is always checked at project root regardless of scope.
 
 ### Step 3: Classify Findings
 
