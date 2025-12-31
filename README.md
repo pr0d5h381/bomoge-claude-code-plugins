@@ -7,6 +7,7 @@ Community plugins for [Claude Code](https://claude.ai/code) - Anthropic's offici
 | Plugin | Description | Category |
 |--------|-------------|----------|
 | [seo-dev](./plugins/seo-dev) | Comprehensive SEO analysis and optimization | Analysis |
+| [prod-ready](./plugins/prod-ready) | Production readiness checker (security, performance, UI/UX, accessibility) | Audit |
 
 ## Installation
 
