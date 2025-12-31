@@ -1,7 +1,10 @@
 {
   "name": "bomoge-claude-code-plugins",
   "description": "Community plugins for Claude Code - SEO analysis, development tools, and more",
-  "owner": "pr0d5h381",
+  "owner": {
+    "name": "Bomoge",
+    "github": "pr0d5h381"
+  },
   "plugins": [
     {
       "name": "seo-dev",
