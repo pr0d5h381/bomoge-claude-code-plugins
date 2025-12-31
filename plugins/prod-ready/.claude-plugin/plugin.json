@@ -1,0 +1,23 @@
+{
+  "name": "prod-ready",
+  "version": "1.0.0",
+  "description": "Comprehensive production readiness checker. Analyzes applications for security, code quality, UI/UX completeness, functionality, performance, SEO, infrastructure, responsiveness, and accessibility before public release.",
+  "author": {
+    "name": "Bomoge",
+    "github": "pr0d5h381"
+  },
+  "repository": "https://github.com/pr0d5h381/bomoge-claude-code-plugins",
+  "license": "MIT",
+  "keywords": [
+    "production",
+    "release",
+    "launch",
+    "readiness",
+    "security",
+    "performance",
+    "accessibility",
+    "seo",
+    "quality",
+    "checklist"
+  ]
+}

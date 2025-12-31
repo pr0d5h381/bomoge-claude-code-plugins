@@ -16,6 +16,17 @@
         "github": "pr0d5h381"
       },
       "tags": ["seo", "optimization", "meta-tags", "structured-data", "next.js", "web-development"]
+    },
+    {
+      "name": "prod-ready",
+      "version": "1.0.0",
+      "description": "Comprehensive production readiness checker. Analyzes applications for security, code quality, UI/UX, functionality, performance, SEO, infrastructure, responsiveness, and accessibility before public release.",
+      "source": "./plugins/prod-ready",
+      "author": {
+        "name": "Bomoge",
+        "github": "pr0d5h381"
+      },
+      "tags": ["production", "launch", "readiness", "security", "performance", "accessibility", "audit", "checklist"]
     }
   ]
 }
