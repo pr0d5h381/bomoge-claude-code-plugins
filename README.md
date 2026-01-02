@@ -8,6 +8,7 @@ Community plugins for [Claude Code](https://claude.ai/code) - Anthropic's offici
 |--------|-------------|----------|
 | [seo-dev](./plugins/seo-dev) | Comprehensive SEO analysis and optimization | Analysis |
 | [prod-ready](./plugins/prod-ready) | Production readiness checker (security, performance, UI/UX, accessibility) | Audit |
+| [mobile-ux](./plugins/mobile-ux) | Mobile UX analysis and optimization, transforms web apps into native-like experiences | Mobile |
 
 ## Installation
 
@@ -33,6 +34,7 @@ claude --plugin-dir /path/to/bomoge-claude-code-plugins/plugins/seo-dev
 ## Plugin Categories
 
 - **Analysis & Optimization** - SEO, performance, code quality
+- **Mobile & UX** - Mobile optimization, native-like experiences, PWA
 - **Development Tools** - Workflows, testing, automation
 - **Integrations** - External services, APIs
 

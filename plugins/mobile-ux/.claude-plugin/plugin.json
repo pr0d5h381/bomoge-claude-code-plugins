@@ -1,0 +1,10 @@
+{
+  "name": "mobile-ux",
+  "version": "1.0.0",
+  "description": "Expert plugin for analyzing and optimizing Next.js applications for mobile UX. Transforms web apps into native-like mobile experiences with app-like feel.",
+  "author": {
+    "name": "Bomoge",
+    "email": "contact@bomoge.com"
+  },
+  "keywords": ["mobile", "ux", "next.js", "pwa", "responsive", "touch", "native-like", "mobile-first"]
+}
