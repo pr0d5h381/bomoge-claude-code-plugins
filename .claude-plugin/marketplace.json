@@ -27,6 +27,17 @@
         "github": "pr0d5h381"
       },
       "tags": ["production", "launch", "readiness", "security", "performance", "accessibility", "audit", "checklist"]
+    },
+    {
+      "name": "mobile-ux",
+      "version": "1.0.0",
+      "description": "Mobile UX analysis and optimization plugin. Transforms web apps into native-like mobile experiences with touch interactions, thumb zones, PWA capabilities, and app-like feel.",
+      "source": "./plugins/mobile-ux",
+      "author": {
+        "name": "Bomoge",
+        "github": "pr0d5h381"
+      },
+      "tags": ["mobile", "ux", "pwa", "touch", "responsive", "native-like", "next.js", "optimization"]
     }
   ]
 }
